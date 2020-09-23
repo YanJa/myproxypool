@@ -1,5 +1,4 @@
 #-*- coding:utf-8 -*-
-
 import threading
 
 from ..spiders import xici, sixsix, kuaidaili, ip181
@@ -28,9 +27,3 @@ def crwal():
         threads[i].join()
 
     print('finished')
-
-
-
-    
-
-

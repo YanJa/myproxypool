@@ -3,6 +3,7 @@ import requests
 import time
 from ..models import Proxy
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 
 from ..utils.checkip import CheckIp
 
@@ -31,7 +32,8 @@ class GeneralMethods():
         try:
             query = self.all_items.get(ip=ip)
             return
-        except:
+        except Exception as exc:
+            print(exc)
             pass
 
         # 不验证直接存储

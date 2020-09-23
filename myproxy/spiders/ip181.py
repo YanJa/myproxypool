@@ -53,6 +53,6 @@ def ip181():
                 type = 'O'
 
             gm.save_proxy('IP181', ip, port, http_head, district=district, http_type=type)
-    except:
-        print('时间 %s ,请求 %s 出错'%(datetime.now(),url))
+    except Exception as exc:
+        print('时间 %s ,请求 %s 出错: %s'%(datetime.now(),url, exc))
         return None

@@ -14,3 +14,7 @@ ghostdriver.log
 *.log
 nohup.out
 db.sqlite3
+
+Pipfile.lock
+
+.vscode/

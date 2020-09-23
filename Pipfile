@@ -1,0 +1,17 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.doubanio.com/simple"
+verify_ssl = true
+
+[dev-packages]
+flake8 = "*"
+
+[packages]
+django = "==1.10"
+requests = "*"
+bs4 = "*"
+selenium = "*"
+lxml = "*"
+
+[requires]
+python_version = "3.6"

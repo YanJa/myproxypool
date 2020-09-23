@@ -17,7 +17,6 @@
 - bs4
 - lxml
 - selenium
-- PhantomJS
 
 ## 下载使用
 
@@ -25,6 +24,10 @@
 
 进入项目文件夹
 
+* 初始化数据
+```
+python 
+```
 创建超级用户
 
 `python manage.py createsuperuser`
