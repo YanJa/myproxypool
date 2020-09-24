@@ -30,7 +30,7 @@ class GeneralMethods():
         '''
         # 查重
         try:
-            query = self.all_items.get(ip=ip)
+            self.all_items.get(ip=ip)
             return
         except Exception as exc:
             print(exc)

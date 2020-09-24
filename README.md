@@ -20,18 +20,20 @@
 
 ## 下载使用
 
-`git clone https://github.com/zx576/proxypool.git`
+`git clone https://github.com/YanJa/proxypool.git`
 
 进入项目文件夹
 
 * 初始化数据
 ```
-python 
+python manage.py makemigtations
+python manage.py migrate
 ```
+
 创建超级用户
-
-`python manage.py createsuperuser`
-
+```
+python manage.py createsuperuser`
+```
 依次输入用户名和密码即可
 
 ## 运行 django 项目
