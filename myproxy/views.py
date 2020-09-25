@@ -8,7 +8,7 @@ from datetime import datetime, timezone, date
 import requests
 
 from .models import Proxy, IpAddr
-from .utils.VerifyProxy import  verify
+from .utils.VerifyProxy import verify
 from .utils.SortDt import sort
 from .utils.fetch import crwal
 
@@ -16,7 +16,8 @@ from .utils.fetch import crwal
 
 # ===========首页==========================================================
 def index(request):
-    items = Proxy.objects.filter(status='V').filter(Validated_time__gte=5).order_by('-last_modified_time')[:50]
+    items = Proxy.objects.filter(status='V').filter(Validated_time__gte=5
+    ).order_by('-last_modified_time')[:50]
 
     contents = {
         'items':items,
@@ -30,7 +31,11 @@ def manage(request):
     return render(request,'myproxy/new_index.html')
 
 # ===========手动工作 ======================================================
+
+
 TASKS = [crwal,sort,verify]
+
+
 @staff_member_required()
 def work(request):
     if request.method == 'GET':
@@ -75,14 +80,16 @@ def get(request):
         return JsonResponse(data)
 
     if request.method == 'GET':
-        valid_ip = Proxy.objects.filter(status='V').filter(Validated_time__gte=5).order_by('-last_modified_time')
+        valid_ip = Proxy.objects.filter(status='V').filter(Validated_time__gte=5
+        ).order_by('-last_modified_time')
         num = request.GET.get('num',None)
         if num :
             try:
                 num = int(num)
                 if num > MAX_REQUIRED_NUM:
                     num = MAX_REQUIRED_NUM
-            except:
+            except Exception as exc:
+                print(exc)
                 num = DEFAULT_NUM
         else:
             num = DEFAULT_NUM
@@ -92,7 +99,8 @@ def get(request):
             try:
                 v_num = int(v_num)
                 valid_ip = valid_ip.filter(Validated_time__gte=v_num)
-            except:
+            except Exception as exc:
+                print(exc)
                 pass
         else:
             pass

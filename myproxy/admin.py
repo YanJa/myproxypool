@@ -13,7 +13,8 @@ from .models import Proxy, IpAddr
 #     resource_class = ProxyResource
 #     date_hierarchy = 'created_time'
 #     list_filter = ('status','resourse','created_time')
-#     list_display = ('ip', 'port', 'head', 'type', 'status', 'district', 'Validated_time', 'failed_time', 'created_time', 'last_modified_time')
+# list_display = ('ip', 'port', 'head', 'type', 'status', 'district', 'Validated_time',
+# 'failed_time', 'created_time', 'last_modified_time')
 #     list_per_page = 50
 
 
