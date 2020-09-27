@@ -3,7 +3,7 @@
 基于 django 制作的 IP 池，本项目使用 requests+bs4 爬取数据，依托 django 数据库系统保存，通过网络请求从数据库内获取 IP，运行中有疑问可以在 Issues 下
 提交。
 
-该 IP 池已经部署到：lab.crossincode.com/proxy
+该 IP 池已经部署到：lab.yanjia.ga/proxy
 
 ## 运行环境
 
@@ -130,7 +130,7 @@ API 地址
 
 http://127.0.0.1:8000/proxy/get/
 
-在线地址：http://lab.crossincode.com/proxy/get/
+在线地址：http://lab.yanjia.ga/proxy/get/
 
 #### 参数
 
@@ -144,7 +144,7 @@ http://127.0.0.1:8000/proxy/get/
 
 示例: http://127.0.0.1:8000/proxy/get/?num=10&v_num=5&head=https&loc=上海
 
-在线地址: http://lab.crossincode.com/proxy/get/?num=10&v_num=5&head=https&loc=上海
+在线地址: http://lab.yanjia.ga/proxy/get/?num=10&v_num=5&head=https&loc=上海
 
 说明: 提取10个ip , 通过验证次数大于等于 5，https 类型，ip坐标上海
 

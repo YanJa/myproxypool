@@ -51,9 +51,10 @@ class CheckIp:
             req = requests.get(url=urls[0], proxies=proxy, timeout=2)
             assert req.status_code == 200
             res = self._extract_ip(req.text)
-            assert bool(res) == True
+            assert bool(res) is True
 
-        except:
+        except Exception as exc:
+            print(exc)
             return False
 
         # 请求大站验证
@@ -63,8 +64,8 @@ class CheckIp:
                 req = requests.get(url=url, proxies=proxy, timeout=2)
                 assert req.status_code == 200
 
-            except Exception as e:
-                # print(e)
+            except Exception as exc:
+                print(exc)
                 return False
 
         return True

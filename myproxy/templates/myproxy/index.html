@@ -1,31 +1,30 @@
 {% extends 'myproxy/base.html' %}
 {% block index %}
 
-
-            <div class="center-block root-index-block">
-                  {% comment %} <p style="color:red">免费代理 IP</p> {% endcomment %}
-                  <table class="table table-bordered" style="color:black">
-                      <tr>
-                        <th>Addr</th>
-                        <th>Port</th>
-                        <th>匿名度</th>
-                        <th>Type</th>
-                        <th>Location</th>
-                        <th>IP 来源</th>
-                        <th>最后验证时间</th>
-                      </tr>
-                      {% for item in items %}
-                      <tr>
-                        <td>{{item.ip }}</td>
-                        <td>{{item.port }}</td>
-                        <td>{{item.get_type_display}}</td>
-                        <td>{{item.head}}</td>
-                        <td>{{item.district}}</td>
-                        <td>{{item.resourse}}</td>
-                        <td>{{item.last_modified_time | date:"Y-m-d H:i:s"}}</td>
-                      </tr>
-                      {% endfor %}
-                  </table>
-            </div>
+  <div class="center-block root-index-block">
+        {% comment %} <p style="color:red">免费代理 IP</p> {% endcomment %}
+        <table class="table table-bordered" style="color:black">
+            <tr>
+              <th>Addr</th>
+              <th>Port</th>
+              <th>匿名度</th>
+              <th>Type</th>
+              <th>Location</th>
+              <th>IP 来源</th>
+              <th>最后验证时间</th>
+            </tr>
+            {% for item in items %}
+            <tr>
+              <td>{{item.ip }}</td>
+              <td>{{item.port }}</td>
+              <td>{{item.get_type_display}}</td>
+              <td>{{item.head}}</td>
+              <td>{{item.district}}</td>
+              <td>{{item.resourse}}</td>
+              <td>{{item.last_modified_time | date:"Y-m-d H:i:s"}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+  </div>
 
 {% endblock %}

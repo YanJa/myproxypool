@@ -37,7 +37,7 @@ class Proxy(models.Model):
     # 按照插入顺序有后向前排列
     class Meta:
         db_table = "myproxy_proxy"
-        ordering = ['-lasted_modified_time']
+        ordering = ['-last_modified_time']
 
 
 class IpAddr(models.Model):
