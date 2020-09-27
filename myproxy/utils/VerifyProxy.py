@@ -59,10 +59,11 @@ def verify_all():
 
 
 def verify_head(ip):
-
+    """
+    验证
+    """
     http_head = {}
     https_head = {}
-    count = 0
     http_head['http'] = ip.ip + ':' + ip.port
     https_head['https'] = ip.ip + ':' + ip.port
 
@@ -100,5 +101,5 @@ def verify_head(ip):
 def verify():
     print('verifying')
     count = verify_all()
-    print('verified all {0} proxies,valid proxies occupy {1} and invalid {2}'.format(count[0] + count[1], count[0],
-                                                                                     count[1]))
+    print('verified all {0} proxies,valid proxies occupy {1} and invalid {2}'.format(
+        count[0] + count[1], count[0], count[1]))

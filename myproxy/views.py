@@ -16,7 +16,7 @@ from .utils.fetch import crwal
 
 # ===========首页==========================================================
 def index(request):
-    items = Proxy.objects.filter(status='V').filter(Validated_time__gte=5
+    items = Proxy.objects.filter(status='V').filter(Validated_time__gte=0
     ).order_by('-last_modified_time')[:50]
 
     contents = {
